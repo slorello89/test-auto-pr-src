@@ -1,0 +1,19 @@
+name: auto-pr-snippets
+on: 
+  push:
+    branch: [main]
+jobs:
+  build:
+    name: Update Snippets in dashboard
+    runs-on: ubuntu-latest:
+    steps:
+      - name: Update Dashboard Snippets
+        uses: nexmo/github-actions/codesnippets-auto-pr@auto-pr-dashboard-snippets
+        env:
+          GH_ADMIN_TOKEN: ${{ secrets.PDX_GH_TOKEN }}
+          PR_ACTIVE_BRANCH: main
+          PR_BRANCH_NAME: automated-snippets-update
+          PR_TARGET_BRANCH: develop
+          PR_TARGET_ORG: slorello89
+          PR_TARGET_REPO: test-auto-pr-dst
+          PR_TITLE: Code snippets update
