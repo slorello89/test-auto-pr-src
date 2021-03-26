@@ -7,7 +7,9 @@ jobs:
     name: Update Snippets in dashboard
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master      
+      - uses: actions/checkout@master
+        with: 
+          repository: /slorello/test-auto-pr-dst
       - name: Update Dashboard Snippets
         uses: nexmo/github-actions/codesnippets-auto-pr@auto-pr-dashboard-snippets
         env:
