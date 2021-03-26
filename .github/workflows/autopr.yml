@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
         with: 
-          repository: /slorello/test-auto-pr-dst
+          repository: /slorello89/test-auto-pr-dst
       - name: Update Dashboard Snippets
         uses: nexmo/github-actions/codesnippets-auto-pr@auto-pr-dashboard-snippets
         env:
