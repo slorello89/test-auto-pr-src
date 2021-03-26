@@ -7,12 +7,7 @@ jobs:
     name: Update Snippets in dashboard
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: coy file
-        uses: canastro/copy-file-action@master
-        with:
-          source: messages.json
-          target: messages.json
+      - uses: actions/checkout@master      
       - name: Update Dashboard Snippets
         uses: nexmo/github-actions/codesnippets-auto-pr@auto-pr-dashboard-snippets
         env:
